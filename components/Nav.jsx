@@ -71,8 +71,27 @@ const Nav = () => {
                                 height={37}
                                 className='rounded-full'
                                 alt='profile'
-                                onClick={() => { }}
+                                onClick={() => { setDropDown((prev) => { !prev }) }}
                             />
+                            {
+                                dropDown && (
+                                    <div className='dropdown'>
+                                        <Link href="/profile" className='dropdown_link' onClick={() => setDropDown(false)}>
+                                            My Profile
+                                        </Link>
+                                        <Link href="/create-prompt" className='dropdown_link' onClick={() => setDropDown(false)}>
+                                            Create Prompt
+                                        </Link>
+                                        <button type='button' onClick={() => {
+                                            setDropDown(false)
+                                            signOut()
+                                        }} className='mt-5 w-full black_btn'>
+                                            Sign Out
+                                        </button>
+                                    </div>
+
+                                )
+                            }
                         </div>
                         :
                         <>
