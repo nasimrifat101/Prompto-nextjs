@@ -1,1 +1,1 @@
-Prompto is a next js prompt generation website im working on to practice next js. and credit goes to  
+Prompto is a next js prompt generation website im working on to practice next js. and credit goes to Javascript mastery on youtube.
